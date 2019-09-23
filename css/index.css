@@ -10,6 +10,7 @@ header {
     grid-row: 1/2;
     grid-column: 1/4;
     background-color: goldenrod;
+    border-radius: 25px;
 }
 
 main {
@@ -28,17 +29,23 @@ footer {
     background-color: goldenrod;
     grid-column: 1/4;
     text-align: center;
+    border-radius: 25px;
 }
 
 img.photo-1 {
     max-width: 100%;
 }
-
+div.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  
 .overlay {
     position: absolute;
     top: 17%;
     left: 65%;
     width: 30%;
+
   }
 
   h1 {
