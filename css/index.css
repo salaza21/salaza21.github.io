@@ -63,3 +63,7 @@ div.card {
 .footer2 {
     font-size: 0.8em;
 }
+
+a:visited {
+    color: black;
+}
