@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap');
+
 body {
     display: grid;
     grid-template-rows: 25% 25% 40% 10%;
     grid-template-columns: 20% auto 25%;
     width: 100vw;
     height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -54,7 +57,7 @@ div.card {
     font-size: 3.5em;
     padding-left: 10%;
     padding-top: 3%;
-    font-family: 'Mansalva', cursive;
+    font-family: 'Anton', sans-serif;
 
   }
 
