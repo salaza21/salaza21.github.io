@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Matias Salazar">
     <meta name="description" content="Assignment portal for Matias Salazar in CIT 230: Web Frontend Development at Brigham Young University - Idaho">   
-    <link rel="stylesheet" href="/css/index.css" >
+    <link rel="stylesheet" href="/css/index.css" media="screen" >
     <title>Home salaza21.github.io</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen" @media screen and (max-width:32.5rem) >
+    <script src="/js/library.js" async></script>
 </head>
 <body>
     <header>
@@ -35,7 +37,7 @@
     </main>
     <footer>
         <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
-        <p class="footer2"> Last Updated: 09/21/2019 9:53:09 </p>
+        <p class="footer2"> Last Updated: <span id="update"></span> </p>
     </footer>
     
     
