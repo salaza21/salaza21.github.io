@@ -96,6 +96,7 @@ a:visited {
     min-width: min-content;
     max-width: 600px;
     min-width: 400px;
+    margin: 0px;
   }
   
   .box:nth-child(even) {
