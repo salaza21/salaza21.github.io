@@ -71,19 +71,6 @@ footer {
 .navigation a:hover {
   background: darken(deepskyblue, 2%);
 }
-
-@media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .navigation {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    padding: 0;
-  }
   
   .navigation a { 
     text-align: center; 
