@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+*,*:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-rows: 25% 10% min-content minmax(20%, min-content);
+    grid-template-columns: 20% auto 25%;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+main {
+    margin-top: 6%;
+    grid-row: 3/4;
+    grid-column: 1/4;
+    margin-left: 5%;
+}
+
+nav {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    font-size: 1em;
+    background-color: lightsteelblue;
+}
+
+footer {
+    grid-row: 4/5;
+    background-color: lightskyblue;
+    grid-column: 1/4;
+    text-align: center;
+    margin-top: 6%;
+
+}
+
+.title {
+  font-size: 3em;
+  padding-top: 5%;
+  padding-left: 3%;
+
+}
+
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+  background: deepskyblue;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
