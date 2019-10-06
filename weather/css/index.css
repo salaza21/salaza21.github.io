@@ -21,6 +21,7 @@ header {
     grid-column: 1/4;
     background-color: lightskyblue;
     text-align: center;
+    font-family: 'Anton', 'sans-serif';
     padding-top: 2%;
     padding-left: 5%;
 }
