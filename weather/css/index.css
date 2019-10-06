@@ -13,7 +13,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 header {
@@ -97,4 +97,6 @@ footer {
 
   .persona-img {
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
