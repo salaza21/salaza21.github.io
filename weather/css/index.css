@@ -21,6 +21,8 @@ header {
     grid-column: 1/4;
     background-color: lightskyblue;
     text-align: center;
+    padding-top: 2%;
+    padding-left: 5%;
 }
 
 main {
@@ -28,12 +30,14 @@ main {
     grid-row: 3/4;
     grid-column: 1/4;
     margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
 }
 
 nav {
     grid-column: 1/4;
     grid-row: 2/3;
-    font-size: 1em;
+    font-size: 1.75em;
     background-color: lightsteelblue;
 }
 
@@ -82,4 +86,14 @@ footer {
   
   .navigation li:last-of-type a {
     border-bottom: none;
+  }
+
+  .img_icon {
+    position: absolute;
+    width: 3em;
+    margin-top: -5%;
+  }
+
+  .persona-img {
+    width: 50%;
   }

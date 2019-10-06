@@ -62,6 +62,7 @@ div.card {
     top: 17%;
     left: 65%;
     width: 30%;
+    max-height: 5fr;
 
   }
 
