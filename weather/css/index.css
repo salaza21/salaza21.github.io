@@ -8,7 +8,7 @@ html {
 }
 body {
     display: grid;
-    grid-template-rows: 25% 10% min-content minmax(20%, min-content);
+    grid-template-rows: auto 10% min-content minmax(20%, min-content);
     grid-template-columns: 20% auto 25%;
     width: 100%;
     height: 100vh;
@@ -25,6 +25,7 @@ header {
     padding-left: 5%;
     max-width: 100%;
     vertical-align: middle;
+    padding-bottom: 5%;
 }
 
 main {
