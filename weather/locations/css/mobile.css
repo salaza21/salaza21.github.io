@@ -40,7 +40,7 @@ main {
 nav {
     grid-column: 1/4;
     grid-row: 2/3;
-    background-color: lightsteelblue;
+    background-color: deepskyblue;
     max-width: 100%;
 }
 
@@ -100,7 +100,8 @@ footer {
 
 }
 nav{
-  background-color: lightsteelblue;
+  background-color: deepskyblue;
+  position: relative;
 }
 nav button{
   margin: .2rem;
@@ -116,11 +117,12 @@ nav ul li a{
   padding: .8rem;
   color: #000;
   border-bottom: 1px solid black;
+  background: white;
 }
 
 
 
-nav ul.navigation{
+nav ul.hide{
   display: none;
 }
 
