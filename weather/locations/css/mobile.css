@@ -1,0 +1,188 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap');
+@media (max-width: 500px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+body {
+    display: grid;
+    grid-template-rows: 15% 8% minmax(70%, min-content)  7%;
+    grid-template-columns: 5% auto 5%;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+header {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    background-color: lightskyblue;
+    text-align: center;
+    font-family: 'Anton', 'sans-serif';
+    max-width: 100%;
+    vertical-align: middle;
+    
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: 80% 20%;
+  min-height: 100%;
+
+}
+
+main {
+    grid-row: 3/4;
+    grid-column: 1/4;
+}
+
+nav {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: lightsteelblue;
+    max-width: 100%;
+}
+
+footer {
+    grid-row: 4/5;
+    background-color: lightskyblue;
+    grid-column: 1/4;
+    text-align: center;
+    font-size: 1em;
+
+}
+
+.title {
+  font-size: 2em;
+  max-width: 100%;
+  grid-column: 2/3;
+  left: 0px;
+  padding-top: 6%;
+
+}
+
+.catchphrase {
+  font-size: 1em;
+  max-width: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  left: 0px;
+
+}
+
+  .img_icon {
+    max-width: 100%;
+    overflow: auto;
+    grid-column: 1/2;
+    left: 0;
+    max-height: 15%;
+  }
+ .footer1 {
+   font-size: 0.4em;
+ }
+ .footer2 {
+   font-size: 0.35em;
+ }
+
+ .header p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+ }
+
+.content {
+  display: grid;
+  grid-template-rows: 8% 8% 18% 18% 18% 18%;
+  grid-template-columns: 20% auto 20%;
+  height: 100%;
+  grid-row-gap: 2%;
+
+
+}
+nav{
+  background-color: lightsteelblue;
+}
+nav button{
+  margin: .2rem;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  
+}
+
+nav ul li a{
+  display: block;
+  padding: .8rem;
+  color: #000;
+  border-bottom: 1px solid black;
+}
+
+
+
+nav ul.navigation{
+  display: none;
+}
+
+li{
+  list-style-type: none;
+  margin: 0;
+}
+
+.city {
+  padding-left: 10%;
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+
+.gps {
+  display: grid;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  padding-left: 10%;
+}
+.card1 {
+  max-height: 100%;
+  max-width: 100%;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+
+}
+
+.card2 {
+  max-height: 100%;
+  max-width: 100%;
+  grid-row: 4/5;
+  grid-column: 2/3;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+
+}
+
+.card3 {
+  max-height: 100%;
+  max-width: 100%;
+  grid-row: 5/6;
+  grid-column: 2/3;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+
+}
+.card4 {
+  max-height: 100%;
+  max-width: 100%;
+  grid-row: 6/7;
+  grid-column: 2/3;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+}
+
+}
