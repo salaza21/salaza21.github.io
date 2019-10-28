@@ -37,34 +37,29 @@
     <main>
         <h1> Progressive Loading Images</h1>
         <picture>
-                <source media="(max-width: 400px)" srcset="/weather/locations/img/clear_mob.jpg">
-                <source media="(max-width: 1200px)" srcset="/weather/locations/img/clear_1200.jpg">
+                <source media="(min-width: 400px)" srcset="/weather/locations/img/clear_1200.jpg">
                 <source media="(min-width: 1201px)" srcset="/weather/locations/img/clear.jpg">
-                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Clear">
+                <img src="/weather/locations/img/stock.jpg" data-src="/weather/locations/img/clear_mob.jpg" class="stock" alt="Clear">
         </picture>
         <picture>
-                <source media="(max-width: 400px)" srcset="/weather/locations/img/cloud_mob.jpg">
-                <source media="(max-width: 1200px)" srcset="/weather/locations/img/clouds_1200.jpg">
+                <source media="(min-width: 400px)" srcset="/weather/locations/img/clouds_1200.jpg">
                 <source media="(min-width: 1201px)" srcset="/weather/locations/img/clouds.jpg">
-                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Cloud">
+                    <img src="/weather/locations/img/stock.jpg" data-src="/weather/locations/img/cloud_mob.jpg" class="stock" alt="Cloud">
         </picture>
         <picture>
-                <source media="(max-width: 400px)" srcset="/weather/locations/img/fog_mob.jpg">
-                <source media="(max-width: 1200px)" srcset="/weather/locations/img/fog_1200.jpg">
+                <source media="(min-width: 400px)" srcset="/weather/locations/img/fog_1200.jpg">
                 <source media="(min-width: 1201px)" srcset="/weather/locations/img/fog.jpg">
-                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Fog">
+                    <img src="/weather/locations/img/stock.jpg" data-src="/weather/locations/img/fog_mob.jpg" class="stock" alt="Fog">
         </picture>
         <picture>
-                <source media="(max-width: 400px)" srcset="/weather/locations/img/rain_mob.jpg">
-                <source media="(max-width: 1200px)" srcset="/weather/locations/img/rain_1200.jpg">
+                <source media="(min-width: 400px)" srcset="/weather/locations/img/rain_1200.jpg">
                 <source media="(min-width: 1201px)" srcset="/weather/locations/img/rain.jpg">
-                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Rain">
+                    <img src="/weather/locations/img/stock.jpg" data-src="/weather/locations/img/rain_mob.jpg" class="stock" alt="Rain">
         </picture>
         <picture>
-                <source media="(max-width: 400px)" srcset="/weather/locations/img/snow_mob.jpg">
-                <source media="(max-width: 1200px)" srcset="/weather/locations/img/snow_1200.jpg">
-                <source media="(min-width: 1201px)" srcset="/weather/locations/img/snow_1200.jpg">
-                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Snow">
+                <source media="(min-width: 400px)" srcset="/weather/locations/img/snow_1200.jpg">
+                <source media="(min-width: 1201px)" srcset="/weather/locations/img/snow.jpg">
+                    <img src="/weather/locations/img/stock.jpg" data-src="/weather/locations/img/snow_mob.jpg" class="stock" alt="Snow">
         </picture>
        
 
