@@ -115,4 +115,11 @@ footer {
 .card1 {
     min-width: 400px;
 }
+ picture .stock{
+  max-width: 80%;
+ }
+ picture {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Matias Salazar">
+    <meta name="description" content="Picture page">   
+    <script src="/weather/locations/js/library.js" async></script>
+    <script src="/weather/locations/js/imagehandling.js" async></script>
+    <title>Home salaza21.github.io</title>
+    <link rel="stylesheet" href="/weather/locations/css/mobile.css">
+    <link rel="stylesheet" href="/weather/locations/css/big.css">
+    <link rel="stylesheet" href="/weather/locations/css/bigger.css">
+    
+</head>
+<body>
+    <header>
+        <div class="banner">
+        <img class="img_icon" src="/weather/locations/img/umbrella_icon.png" alt="page-icon">
+        <div class=title> Weatheria Channel </div>
+        <div class=catchphrase> Brave the elements</div>
+        </div>
+    </header>
+    
+    <nav>
+            <button onclick="toggleMenu()">&#9832; Menu</button>
+                <ul id="primaryNav" class="navigation hide">
+                    <li><a href="/weather/locations/Preston.html">Home</a></li>
+                    <li><a href="/weather/locations/Preston.html">Preston</a></li>
+                    <li><a href="#">Soda Springs</a></li>
+                    <li><a href="#">Storm Center</a></li>
+                    <li><a href="#">Fish Haven</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+    </nav>
+    <main>
+        <h1> Progressive Loading Images</h1>
+        <picture>
+                <source media="(max-width: 400px)" srcset="/weather/locations/img/clear_mob.jpg">
+                <source media="(max-width: 1200px)" srcset="/weather/locations/img/clear_1200.jpg">
+                <source media="(min-width: 1201px)" srcset="/weather/locations/img/clear.jpg">
+                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Clear">
+        </picture>
+        <picture>
+                <source media="(max-width: 400px)" srcset="/weather/locations/img/cloud_mob.jpg">
+                <source media="(max-width: 1200px)" srcset="/weather/locations/img/clouds_1200.jpg">
+                <source media="(min-width: 1201px)" srcset="/weather/locations/img/clouds.jpg">
+                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Cloud">
+        </picture>
+        <picture>
+                <source media="(max-width: 400px)" srcset="/weather/locations/img/fog_mob.jpg">
+                <source media="(max-width: 1200px)" srcset="/weather/locations/img/fog_1200.jpg">
+                <source media="(min-width: 1201px)" srcset="/weather/locations/img/fog.jpg">
+                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Fog">
+        </picture>
+        <picture>
+                <source media="(max-width: 400px)" srcset="/weather/locations/img/rain_mob.jpg">
+                <source media="(max-width: 1200px)" srcset="/weather/locations/img/rain_1200.jpg">
+                <source media="(min-width: 1201px)" srcset="/weather/locations/img/rain.jpg">
+                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Rain">
+        </picture>
+        <picture>
+                <source media="(max-width: 400px)" srcset="/weather/locations/img/snow_mob.jpg">
+                <source media="(max-width: 1200px)" srcset="/weather/locations/img/snow_1200.jpg">
+                <source media="(min-width: 1201px)" srcset="/weather/locations/img/snow_1200.jpg">
+                    <img src="/weather/locations/img/stock.jpg" class="stock" alt="Snow">
+        </picture>
+       
+
+            
+    </main>
+    <footer>
+        Today's Date: <span id="today"></span>
+        <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
+    </footer>
+    
+    
+</body>
+</html>
