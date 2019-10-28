@@ -191,7 +191,11 @@ li{
 }
 
 .stock {
-  max-width: 300px;
+  max-width: 90%;
   padding: 1%;
+}
+picture {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 }

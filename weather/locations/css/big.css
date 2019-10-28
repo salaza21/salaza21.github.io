@@ -116,10 +116,10 @@ footer {
     min-width: 400px;
 }
  picture .stock{
-  max-width: 80%;
+  max-width: 90%;
  }
  picture {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 }
