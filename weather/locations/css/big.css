@@ -126,6 +126,7 @@ footer {
 .flex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .container-top{
   width: 75%;
@@ -149,5 +150,9 @@ footer {
 
 .clouds{
   background-image: url("/weather/locations/img/clouds_1200.jpg");
+}
+.clear, .clouds, .snow, .rain, .fog {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 }
