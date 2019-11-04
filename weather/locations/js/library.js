@@ -1,3 +1,6 @@
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
+
 function toggleMenu(){
     document.getElementById("primaryNav").classList.toggle("hide");
 }
@@ -25,3 +28,4 @@ function footerDate() {
 }
 
 footerDate();
+

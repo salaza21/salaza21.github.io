@@ -197,4 +197,37 @@ picture {
   margin-left: 5%;
   margin-right: 5%;
 }
+.container-top{
+  width: 95%;
+}
+p#current{
+  font-size: 5rem;
+  grid-column: 4/12;
+}
+p#feelTemp{
+  grid-column: 3/13;
+}
+.clear{
+  background-image: url("/weather/locations/img/clear_mob.jpg");
+}
+
+.rain{
+  background-image: url("/weather/locations/img/rain_mob.jpg");
+}
+
+.fog{
+  background-image: url("/weather/locations/img/fog_mob.jpg");
+}
+
+.snow{
+  background-image: url("/weather/locations/img/snow_mob.jpg");
+}
+
+.clouds{
+  background-image: url("/weather/locations/img/clouds_mob.jpg");
+}
+.clear, .clouds, .snow, .rain, .fog {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 }

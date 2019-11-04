@@ -14,6 +14,7 @@ body {
 .container {
     flex-wrap: wrap;
 }
+
 header {
     grid-row: 1/2;
     grid-column: 1/4;
@@ -121,5 +122,32 @@ footer {
  picture {
   margin-left: 5%;
   margin-right: 5%;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-top{
+  width: 75%;
+  
+}
+.clear{
+  background-image: url("/weather/locations/img/clear_1200.jpg");
+}
+
+.rain{
+  background-image: url("/weather/locations/img/rain_1200.jpg");
+}
+
+.fog{
+  background-image: url("/weather/locations/img/fog_1200.jpg");
+}
+
+.snow{
+  background-image: url("/weather/locations/img/snow_1200.jpg");
+}
+
+.clouds{
+  background-image: url("/weather/locations/img/clouds_1200.jpg");
 }
 }

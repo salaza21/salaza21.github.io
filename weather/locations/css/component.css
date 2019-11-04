@@ -12,6 +12,7 @@
     margin: .5rem;
     max-width: min-content;
     margin-right: 0;
+    background-color: rgba(255,255,255,.7);
 }
 .temperatures{
     display: grid;
@@ -34,123 +35,123 @@
    grid-row: 10/13;
    font-size: 2.6rem;
 }
-#o1, #to1, #co1{
+.o1, .to1, .co1{
     grid-column: 10;
     
     font-size: 1.5rem;
 
 }
-#o2, #to2, #co2{
+.o2, .to2, .co2{
     grid-column: 15;
     grid-row: 2;
     font-size: 1.5rem;
 }
-#o3, #to3, #co3{
+.o3, .to3, .co3{
     grid-column: 18;
     grid-row: 6;
     font-size: 1.5rem;
 }
-#o4, #to4, #co4{
+.o4, .to4, .co4{
     grid-column: 19;
     grid-row: 11;
     font-size: 1.5rem;
 }
-#o5, #to5, #co5{
+.o5, .to5, .co5{
     grid-column: 18;
     grid-row: 16;
     font-size: 1.5rem;
 }
-#o6, #to6, #co6{
+.o6, .to6, .co6{
     grid-column: 15;
     grid-row: 19;
     font-size: 1.5rem;
 }
-#o7, #to7, #co7{
+.o7, .to7, .co7{
     grid-column: 10;
     grid-row: 20;
     font-size: 1.5rem;
 }
-#o8, #to8, #co8{
+.o8, .to8, .co8{
     grid-column: 5;
     grid-row: 19;
     font-size: 1.5rem;
 }
-#o9, #to9, #co9{
+.o9, .to9, .co9{
     grid-column: 2;
     grid-row: 16;
     font-size: 1.5rem;
 }
-#o10, #to10, #co10{
+.o10, .to10, .co10{
     
     grid-row: 11;
     font-size: 1.5rem;
 }
-#o11, #to11, #co11{
+.o11, .to11, .co11{
     grid-column: 2;
     grid-row: 6;
     font-size: 1.5rem;
 }
-#o12, #to12, #co12{
+.o12, .to12, .co12{
     grid-column: 5;
     grid-row: 2;
     font-size: 1.5rem;
 }
-#i1, #ti1, #ci1{
+.i1, .ti1, .ci1{
     grid-column: 14;
     grid-row: 5;
     font-size: 1.4rem;
 }
-#i2, #ti2, #ci2{
+.i2, .ti2, .ci2{
     grid-column: 16;
     grid-row: 8;
     font-size: 1.4rem;
 }
-#i3, #ti3, #ci3{
+.i3, .ti3, .ci3{
     grid-column: 17;
     grid-row: 11/13;
     font-size: 1.4rem;
 }
-#i4, #ti4, #ci4{
+.i4, .ti4, .ci4{
     grid-column: 16;
     grid-row: 14;
     font-size: 1.4rem;
 }
-#i5, #ti5, #ci5{
+.i5, .ti5, .ci5{
     grid-column: 14;
     grid-row: 16;
     font-size: 1.4rem;
 }
-#i6, #ti6, #ci6{
+.i6, .ti6, .ci6{
     grid-column: 10/12;
     grid-row: 17/19;
     font-size: 1.8rem;
 }
-#i7, #ti7, #ci7{
+.i7, .ti7, .ci7{
     grid-column: 7;
     grid-row: 16;
     font-size: 1.4rem;
 }
-#i8, #ti8, #ci8{
+.i8, .ti8, .ci8{
     grid-column: 5;
     grid-row: 14;
     font-size: 1.4rem;
 }
-#i9, #ti9, #ci9{
+.i9, .ti9, .ci9{
     grid-column: 4;
     grid-row: 11;
     font-size: 1.4rem;
 }
-#i10, #ti10, #ci10{
+.i10, .ti10, .ci10{
     grid-column: 5;
     grid-row: 8;
     font-size: 1.4rem;
 }
-#i11, #ti11, #ci11{
+.i11, .ti11, .ci11{
     grid-column: 7;
     grid-row: 5;
     font-size: 1.4rem;
 }
-#i12, #ti12, #ci12{
+.i12, .ti12, .ci12{
     grid-column: 10;
     grid-row: 4;
     font-size: 1.4rem;
@@ -166,18 +167,75 @@
     grid-row: 4;
 }
 
-#ball, #tball, #cball {
-    width: 3.5em;
-    height: 3.5em;
+.ball, .tball, .cball {
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 100%;
     background-color: red;
-    grid-column: 9;
-    grid-row: 4;
+
     
 }
 
 .precipTitle{
     max-width: 20rem;
     font-size: 2rem;
+    text-align: center;
+}
+
+.container-top{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(4, 25%);
+    border-style: solid;
+    border-radius: 1rem;
+    margin: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255,255,255,.7);
+}
+
+p#high{
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    font-size: 2rem;
+    color: red;
+    text-align: center;
+
+}
+p#low{
+    font-size: 2rem;
+    display: grid;
+    grid-column: 12/13;
+    grid-row: 1/2;
+    color: blue;
+    text-align: center;
+}
+p#current{
+    font-size: 3rem;
+    display: grid;
+    grid-column: 7/9;
+    grid-row: 2/3;
+    text-align: center;
+}
+p#feelTemp{
+    font-size: 2rem;
+    display: grid;
+    grid-column: 5/11;
+    grid-row: 3/4;
+    text-align: center;
+}
+p#wind{
+    font-size: 2rem;
+    display: grid;
+    grid-column: 12/14;
+    grid-row: 4/5;
+    text-align: center;
+}
+p#gusts{
+    font-size: 2rem;
+    display: grid;
+    grid-column: 3/6;
+    grid-row: 4/5;
     text-align: center;
 }
