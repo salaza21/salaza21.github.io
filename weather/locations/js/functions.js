@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(hour);
     timeBall(hour);
     // Changes the backgorund image
-    let weather = "clear";
+    let weather = "rAin";
     changeSummaryImage(weather);
 })
 
@@ -87,20 +87,21 @@ function changeSummaryImage(weather){
      // adds the class name to change the backgorund image
     console.log(weather);
      switch(weather){
-         case "clear":
-            x.className += 'clear';
-         break;
+        case"fog":
+        x.className += 'fog';
+        break;
          case "rain":
             x.className += 'rain';
          break;
-         case"fog":
-            x.className += 'fog';
-         break;
+         
          case"snow":
             x.className += 'snow';
          break;
          case"clouds":
          x.className += 'clouds';
+         break;
+         case "clear":
+            x.className += 'clear';
          break;
      }       
     
