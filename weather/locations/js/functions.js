@@ -274,6 +274,87 @@ function buildPage() {
    let latLon = document.querySelector('#latLon');
    latLon.innerHTML = sessStore.getItem('coordinates');
    // The latitude and longitude should match what was stored in session storage.
+   // **********  Set the Time Indicators  **********
+    let thisDate = new Date();
+    var currentHour = thisDate.getHours();
+    let indicatorHour;
+    // If hour is greater than 12, subtract 12
+    if (currentHour > 12) {
+        indicatorHour = currentHour - 12;
+    } else {
+        indicatorHour = currentHour;
+    };
+    console.log(`Current hour in time indicator is: ${currentHour}`);
+    // Set the time indicator
+    //timeIndicator(indicatorHour);
+    // ********** Hourly Temperature Component  **********
+    // Get the hourly data from storage as an array
+    let currentData = [];
+    let tempHour = currentHour;
+    // Adjust counter based on current time
+    for (let i = 0, x = 12; i < x; i++) {
+    if (tempHour <= 23) {
+        currentData[i] = sessStore.getItem('hour' + tempHour).split(",");
+        tempHour++;
+    } else {
+    tempHour = tempHour - 12;
+    currentData[i] = sessStore.getItem('hour' + tempHour).split(",");
+    console.log(`CurrentData[i][0] is: ${currentData[i][0]}`);
+    tempHour = 1;
+    }
+    }
+    console.log(currentData);
+
+// Loop through array inserting data
+// Start with the outer container that matchs the current time
+tempHour = currentHour;
+for (let i = 0, x = 12; i < x; i++) {
+ if (tempHour >= 13) {
+  tempHour = tempHour - 12;
+ }
+ console.log(`Start container is: #temps to.${tempHour}`);
+ $('#temps .to' + tempHour).innerHTML = currentData[i][0];
+ tempHour++;
+}
+// ********** Hourly Wind Component  **********
+// Get the hourly data from storage
+let windArray = [];
+let windHour = currentHour;
+// Adjust counter based on current time
+for (let i = 0, x = 12; i < x; i++) {
+ if (windHour <= 23) {
+  windArray[i] = currentData[i][1].split(" ");
+  console.log(`windArray[i] is: ${windArray[i]}`);
+  windHour++;
+ } else {
+  windHour = windHour - 12;
+  windArray[i] = currentData[i][1].split(" ");
+  windHour = 1;
+ }
+}
+console.log(windArray);
+
+// Insert Wind data
+// Start with the outer container that matchs the time indicator
+windHour = currentHour;
+for (let i = 0, x = 12; i < x; i++) {
+ if (windHour >= 13) {
+  windHour = windHour - 12;
+ }
+ $('#winds .o' + windHour).innerHTML = windArray[i][0];
+ windHour++;
+}let conditionHour = currentHour;
+// Adjust counter based on current time
+for (let i = 0, x = 12; i < x; i++) {
+ if (conditionHour >= 13) {
+  conditionHour = conditionHour - 12;
+ }
+ console.log('CurrentData: ' + currentData[i][2] )
+ $('#conditions .co' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
+ conditionHour++;
+}
+//contentContainer.setAttribute('class', ''); // removes the hide class from main
+//statusContainer.setAttribute('class', 'hide'); // hides the status container
 }
  /* ************************************
 *  SETS THE BACKGROUND VALUE

@@ -230,4 +230,8 @@ p#feelTemp{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#conditions img {
+width: 30px;
+}
 }
