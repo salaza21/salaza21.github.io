@@ -1,3 +1,11 @@
+
+'use strict';
+var idHeader = {
+    headers: {
+     "User-Agent": "Student Learning Project - yourschoolemailaddress@byui.edu"
+    }
+};
+
 var pageNav = document.querySelector('#page-nav');
 var statusContainer = document.querySelector('#status');
 var contentContainer = document.querySelector('#main-content');
@@ -6,7 +14,12 @@ var sessStore = window.sessionStorage;
 let weatherURL = "/weather/locations/js/idahoweather.json";
 
 let title = document.querySelector('#page-title');
+let path = title.dataset.title; 
 document.addEventListener("DOMContentLoaded", function(){
+    if (path == "Home") {
+        getGeoLocation();
+    }
+    else {
     //buildModDate();
     // Variables for Wind Chill function
     let temp = 31;
@@ -23,35 +36,11 @@ document.addEventListener("DOMContentLoaded", function(){
     timeBall(hour);
     // Three DOM structures
     fetchWeatherData(weatherURL);
-
-
+    }
 
 })
 
-// Calculate the Windchill
-function buildWC(speed, temp) {
-    let feelTemp = document.getElementById('feelTemp');
-    let highTemp = document.getElementById('high');
-    let lowTemp = document.getElementById('low');
-    let currentTemp = document.getElementById('current');
-    let windSpeed = document.getElementById('wind');
-    let windGusts = document.getElementById('gusts');
-    let high = temp + 15;
-    let low = temp - 12;
-    highTemp.innerHTML = high + '&#176;';
-    lowTemp.innerHTML = low + '&#176;';
-    currentTemp.innerHTML = temp + '&#176;' + 'F';
-    windSpeed.innerHTML =  speed + ' mph      ';
-    windGusts.innerHTML = 'Gusts: ' + (speed + 2) + ' mph';
-    // Compute the windchill
-    let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
-    console.log(wc);
-    wc = Math.floor(wc);
-    // Display the windchill
-    console.log(wc);
-    wc = 'Feels like ' + wc + '&deg;F';
-    feelTemp.innerHTML = wc;
-}
+
 function toggleMenu(){
     document.getElementById("primaryNav").classList.toggle("hide");
 }
@@ -105,6 +94,9 @@ function changeSummaryImage(weather){
      switch(weather){
         case"fog":
         x.className += 'fog';
+        break;
+        case"windy":
+        x.className += 'clouds';
         break;
          case "rain":
             x.className += 'rain';
@@ -184,7 +176,7 @@ function changeSummaryImage(weather){
       let windSpeed = p.properties.relativeLocation.properties.windSpeed;
       console.log(`windspeed is: ${windSpeed}`);
       sessStore.setItem("windspeed", windSpeed);
-      windy = document.querySelector('#wind');
+      let windy = document.querySelector('#wind');
       windy.innerHTML = sessStore.getItem('windspeed');
 
       let windGust = p.properties.relativeLocation.properties.windGust;
@@ -192,6 +184,11 @@ function changeSummaryImage(weather){
       sessStore.setItem("windGust", windGust);
       let gust= document.querySelector('#gusts');
       gust.innerHTML = sessStore.getItem('windGust');
+
+      console.log("this is windSpeed: " + windSpeed);
+      console.log("this is temperature: " + temperature);
+
+      buildWC(windSpeed, temperature);
   
       // Get the hourly data using another function - should include the forecast temp, condition icons and wind speeds. The data will be stored into session storage.
       getHourly(p.properties.forecastHourly);
@@ -271,8 +268,7 @@ function buildPage() {
   contentHeading.innerHTML = sessStore.getItem('fullName');
   // The h1 in the main element should now say "Preston, Idaho"
    // Get the coordinates container for the location
-   let latLon = document.querySelector('#latLon');
-   latLon.innerHTML = sessStore.getItem('coordinates');
+
    // The latitude and longitude should match what was stored in session storage.
    // **********  Set the Time Indicators  **********
     let thisDate = new Date();
@@ -365,7 +361,7 @@ function setBackground(shortForecast){
     if (shortForecast.includes("sun") || shortForecast.includes("clear")){
        keyword = "clear";
     }
-    else if (shortForecast.includes("cloud")){
+    else if (shortForecast.includes("cloud") || shortForecast.includes("windy")){
        keyword = "clouds";
     }
     else if (shortForecast.includes("rain")){
@@ -380,4 +376,249 @@ function setBackground(shortForecast){
     console.log('Keyword is: ', keyword)
     return keyword;
 }
+// Gets longitude and latitude of current location
+function getGeoLocation() {
+    console.log("getGeo is working");
+    const status = document.getElementById('status');
+    status.innerHTML = 'Getting Location...';
+    if (navigator.geolocation) {
+        console.log(navigator.geolocation);
+        navigator.geolocation.getCurrentPosition(function (position) {
+         const lat = position.coords.latitude;
+         const long = position.coords.longitude;
+      
+         // Combine the values for use later
+         const locale = lat + "," + long;
+         console.log(`Locale values are: ${locale}.`);
+         
+         getLocation(locale);
+         // Store the values to session storage
+         window.sessionStorage.setItem("locale", locale);
+         window.sessionStorage.setItem("latitude", lat);
+         window.sessionStorage.setItem("longitude", long);
+         let coord = document.querySelector('#latLon');
+         coord.innerHTML = sessStore.getItem('locale');
+      
+        })
+       } else {
+        status.innerHTML = "Your browser doesn't support Geolocation or it is not enabled!";
+       } // end else
+} //end getGeoLocation
+
+// Gets location information from the NWS API
+function getLocation(locale) {
+    const URL = "https://api.weather.gov/points/" + locale; 
+    console.log("Url of locale: " + URL);
+    window.sessionStorage.setItem("localeURL", URL);
+    // NWS User-Agent header (built above) is the second parameter 
+    fetch(URL, idHeader) 
+    .then(function(response){
+      if(response.ok){ 
+       return response.json(); 
+      } 
+      throw new ERROR('Response not OK.');
+    })
+    .then(function (data) { 
+      // Let's see what we got back
+      console.log('Json object from getLocation function:'); 
+      console.log(data);
+      // Store data to sessionStorage 
+      window.sessionStorage.setItem("locName", data.properties.relativeLocation.properties.city); 
+      window.sessionStorage.setItem("locState", data.properties.relativeLocation.properties.state);
+      let fullName = data.properties.relativeLocation.properties.city + ", " + data.properties.relativeLocation.properties.state;
+      window.sessionStorage.setItem("fullName", fullName); 
+      
+      // Store three URL's for stationId's, forecast and hourly forecast
+      // The URL's are in the returned location data object
+      window.sessionStorage.setItem("hourlyURL", data.properties.forecastHourly);
+      window.sessionStorage.setItem("forecastURL", data.properties.forecast);
+      let stationsURL = data.properties.observationStations;
+      window.sessionStorage.setItem("stationsURL", stationsURL); 
+   
+      // Call the function to get the list of weather stations
+      // using the URL for the weather station list
+      getStationId(stationsURL); 
+     }) 
+    .catch(error => console.log('There was a getLocation error: ', error)) 
+   } // end getLocation function
+
+   // Gets weather station list and the nearest weather station ID from the NWS API
+function getStationId(stationsURL) { 
+    // NWS User-Agent header (built above) will be the second parameter 
+    fetch(stationsURL, idHeader) 
+    .then(function(response){
+      if(response.ok){ 
+       return response.json(); 
+      } 
+      throw new ERROR('Response not OK.');
+    })
+    .then(function (data) { 
+      // Let's see what we got back
+      console.log('From getStationId function:'); 
+      console.log(data);
+    
+      // Store station ID and elevation (in meters - will need to be converted to feet) 
+      let stationId = data.features[0].properties.stationIdentifier; 
+      let stationElevation = data.features[0].properties.elevation.value; 
+      console.log('Station and Elevation are: ' + stationId, stationElevation); 
+      // You may want to convert the elevation to feet before storing the value
+      // Store data to sessionStorage 
+      window.sessionStorage.setItem("stationId", stationId); 
+      window.sessionStorage.setItem("stationElevation", stationElevation); 
+   
+      // Request the Current Weather for this station 
+      getWeather(stationId);
+     }) 
+    .catch(error => console.log('There was a getStationId error: ', error)) 
+   } // end getStationId function
+
+   // Gets current weather information for a specific weather station from the NWS API
+function getWeather(stationId) { 
+    // This is the URL for current observation data 
+    const URL = 'https://api.weather.gov/stations/' + stationId + '/observations/latest';
+    console.log("URL is: " + URL);
+    fetch(URL, idHeader) 
+    .then(function(response){
+      if(response.ok){ 
+       return response.json(); 
+      } 
+      throw new ERROR('Response not OK.');
+    })
+    .then(function (data) { 
+      // Let's see what we got back
+      console.log('From getWeather function:'); 
+      console.log(data);
+    
+      // Store current weather information to sessionStorage 
+      let currTemp = convertCelcius(data.properties.temperature.value);
+      window.sessionStorage.setItem("temperature", currTemp);
+      let tempCurr = document.querySelector('#current');
+      tempCurr.innerHTML = Math.floor(sessStore.getItem('temperature'));
+      let windSpeed = mpsToMph(data.properties.windSpeed.value);
+      window.sessionStorage.setItem("windSpeed", windSpeed);
+      window.sessionStorage.setItem("feelsLike", buildWC(windSpeed, currTemp));
+      window.sessionStorage.setItem("condition", data.properties.textDescription);
+   
+      // Call the getForecast function
+      getForecastHome(sessStore.getItem("forecastURL"));
+   
+      // Call the getHourly function
+     getHourlyHome(sessStore.getItem("hourlyURL"));
+    
+     }) 
+    .catch(error => console.log('There was a getWeather error: ', error)) 
+   } // end getWeather function
+
+   function convertCelcius(celsius) {
+    var faren = (celsius * 9/5) + 32;
+    return faren;
+   }
+   
+   function mpsToMph(mps) {
+    var mph = mps * 2.237;
+    return mph;
+   }
+
+   function buildWC(speed, temp) {
+    let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
+    return wc;
+   }
+
+   function getForecastHome(URL){
+    fetch(URL, idHeader) 
+    .then(function(response){
+      if(response.ok){ 
+       return response.json(); 
+      } 
+      throw new ERROR('Response not OK.');
+    })
+    .then(function (data) { 
+      // Let's see what we got back
+      console.log('From getWeather function:'); 
+      console.log(data);
+    let wSpeedCurr = document.querySelector('#wind');
+    wSpeedCurr.innerHTML = Math.floor(sessStore.getItem('windSpeed'));
+    window.sessionStorage.setItem("windGust", data.properties.periods[0].windSpeed);
+    let wGustCurr = document.querySelector('#gusts');
+    wGustCurr.innerHTML = sessStore.getItem('windGust');
+    let tempHigh = data.properties.periods[0].temperature;
+    window.sessionStorage.setItem("tempHigh", tempHigh);
+    let highCurr = document.querySelector('#high');
+    highCurr.innerHTML = sessStore.getItem('tempHigh');
+    let tempLow = data.properties.periods[1].temperature;
+    window.sessionStorage.setItem("tempLow", tempLow);
+    let lowCurr = document.querySelector('#low');
+    lowCurr.innerHTML = sessStore.getItem('tempLow');
+}) 
+.catch(error => console.log('There was a getForecast error: ', error)) 
+}
+
+  function getHourlyHome(URL) {
+    fetch(URL)
+     .then(function (response) {
+      if (response.ok) {
+       return response.json();
+      }
+      throw new ERROR('Response not OK.');
+     })
+     .then(function (data) {
+      console.log('Data from getHourly function:');
+      console.log(data); // Let's see what we got back
+   
+      // Store 12 hours of data to session storage  
+      var hourData = [];
+      let todayDate = new Date();
+      var nowHour = todayDate.getHours();
+      console.log(`nowHour is ${nowHour}`);
+      timeBall(nowHour);
+      for (let i = 0, x = 11; i <= x; i++) {
+       if (nowHour < 24) {
+        hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windSpeed + "," + data.properties.periods[i].icon;
+        sessStore.setItem(`hour${nowHour}`, hourData[nowHour]);
+        nowHour++;
+       } else {
+        nowHour = nowHour - 12;
+        hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windSpeed + "," + data.properties.periods[i].icon;
+        sessStore.setItem(`hour${nowHour}`, hourData[nowHour]);
+        nowHour = 1;
+       }
+      }
+   
+      // Get the shortForecast value from the first hour (the current hour)
+      // This will be the condition keyword for setting the background image
+      sessStore.setItem("shortForecast", data.properties.periods[0].shortForecast);
+      
+      console.log(`shortForecast: ` + sessStore.getItem("shortForecast"));
+      // Set bACKGROUND ACCORDING TO json
+      var backImageBig = sessStore.getItem("shortForecast");
+      var backImage = backImageBig.toLowerCase();
+      var weather = setBackground(backImage);
+
+      changeSummaryImage(weather);
+   
+      // Call the buildPage function
+      buildPage();
+     })
+     .catch(error => console.log('There was a getHourly error: ', error))
+   }
+// Calculate the Windchill
+function buildWC(speed, temp) {
+    let feelTemp = document.getElementById('feelTemp');
+    console.log("this is the speed passed in buildWC " + speed );
+    console.log("this is the temp passed in buildWC " + temp );
+    // Compute the windchill
+    let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
+    console.log(wc);
+    wc = Math.floor(wc);
+    // Display the windchill
+    console.log(wc);
+    wc = 'Feels like ' + wc + '&deg;F';
+    feelTemp.innerHTML = wc;
+    return wc;
+}
+
+    /*// Change the status of the containers
+    contentContainer.setAttribute('class', ''); // removes the hide class from main
+    statusContainer.setAttribute('class', 'hide'); // hides the status container
+*/
 footerDate();

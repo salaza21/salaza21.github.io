@@ -140,7 +140,7 @@ function getWeather(stationId) {
       getForecast(sessStore.getItem("forecastURL"));
    
       // Call the getHourly function
-     getHourly();
+     getHourly(sessStore.getItem("hourlyURL"));
     
      }) 
     .catch(error => console.log('There was a getWeather error: ', error)) 

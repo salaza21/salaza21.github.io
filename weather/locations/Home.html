@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Matias Salazar">
+    <meta name="description" content="Assignment portal for Matias Salazar in CIT 230: Web Frontend Development at Brigham Young University - Idaho">   
+    
+    <title id="page-title" data-title = 'Home'> | The Weather Site</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="/weather/locations/css/mobile.css">
+    <link rel="stylesheet" href="/weather/locations/css/big.css">
+    <link rel="stylesheet" href="/weather/locations/css/bigger.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class="banner">
+        <img class="img_icon" src="/weather/locations/img/umbrella_icon.png" alt="page-icon">
+        <div class=title> Weatheria Channel </div>
+        <div class=catchphrase> Brave the elements</div>
+        </div>
+    </header>
+    
+    <nav>
+            <button onclick="toggleMenu()">&#9832; Menu</button>
+                <ul id="primaryNav" class="navigation hide">
+                    <li><a href="/weather/locations/Home.html">Home</a></li>
+                    <li><a href="/weather/locations/Preston.html">Preston</a></li>
+                    <li><a href="/weather/locations/SodaSprings.html">Soda Springs</a></li>
+                    <li><a href="#">Storm Center</a></li>
+                    <li><a href="#">Fish Haven</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+    </nav>
+    <main>
+            <section id = 'status'></section>
+            <section class="content">
+                <h2 class="city" id="contentHeading"> Preston Idaho</h2>
+                <h3 class="gps" id="latLon"> 000000 , 000000</h3>
+                <div id="containers">
+                    <div class="container-top">
+                        <p id="high">??</p>
+                        <p id="low">??</p>
+                        <p id="current">??</p>
+                        <p id="feelTemp">??</p>
+                        <p id="wind">??</p>
+                        <p id="gusts">??</p>
+                    </div>
+                <div class="flex">
+                    <Div class = "container"> 
+                            <h3 class="precipTitle">Winds</h3>
+                        <div class = "precipitation" id="winds">
+                    
+                        <div class="o1">20%</div>
+                        <div class="o2">15%</div>
+                        <div class="o3">17%</div>
+                        <div class="o4">10%</div>
+                        <div class="o5">9%</div>
+                        <div class="o6">2%</div>
+                        <div class="o7">0%</div>
+                        <div class="o8">2%</div>
+                        <div class="o9">3%</div>
+                        <div class="o10">8%</div>
+                        <div class="o11">0%</div>
+                        <div class="o12">0%</div>
+                
+                        <div id="mid">&#9730;%</div>
+                    
+                        <div class="i1 ball">1</div>
+                        <div class="i2 ball">2</div>
+                        <div class="i3 ball">3</div>
+                        <div class="i4 ball">4</div>
+                        <div class="i5 ball">5</div>
+                        <div class="i6 ball">6</div>
+                        <div class="i7 ball">7</div>
+                        <div class="i8 ball">8</div>
+                        <div class="i9 ball">9</div>
+                        <div class="i10 ball">10</div>
+                        <div class="i11 ball">11</div>
+                        <div class="i12 ball">12</div>
+                
+                        <div id="circle"></div>
+                   
+                    
+                        </div>
+                    </Div>
+                <Div class = "container"> 
+                        <h3 class="precipTitle">Temperatures</h3>
+                <Div class = "temperatures" id ="temps"> 
+                        
+                       
+                        
+                        <div class="to1">60&#176;</div>
+                        <div class="to2">64&#176;</div>
+                        <div class="to3">65&#176;</div>
+                        <div class="to4">65&#176;</div>
+                        <div class="to5">64&#176;</div>
+                        <div class="to6">62&#176;</div>
+                        <div class="to7">42&#176;</div>
+                        <div class="to8">40&#176;</div>
+                        <div class="to9">35&#176;</div>
+                        <div class="to10">33&#176;</div>
+                        <div class="to11">30&#176;</div>
+                        <div class="to12">30&#176;</div>
+                    
+                        <div id="tmid">&#8457;</div>
+                        
+                        <div class="i1 ball">1</div>
+                        <div class="i2 ball">2</div>
+                        <div class="i3 ball">3</div>
+                        <div class="i4 ball">4</div>
+                        <div class="i5 ball">5</div>
+                        <div class="i6 ball">6</div>
+                        <div class="i7 ball">7</div>
+                        <div class="i8 ball">8</div>
+                        <div class="i9 ball">9</div>
+                        <div class="i10 ball">10</div>
+                        <div class="i11 ball">11</div>
+                        <div class="i12 ball">12</div>
+                    
+                        <div id="tcircle"></div>
+                    
+                    </Div>
+                </div>
+                <Div class = "container"> 
+                        <h3 class="precipTitle">Conditions</h3>
+                    <Div class = "conditions" id="conditions"> 
+                            
+                            
+                            <div class="co1">&#x1F324;</div>
+                            <div class="co2">&#x1F324;</div>
+                            <div class="co3">&#x1F324;</div>
+                            <div class="co4">&#9788;</div>
+                            <div class="co5">&#9788;</div>
+                            <div class="co6">&#9788;</div>
+                            <div class="co7">&#x1F327;</div>
+                            <div class="co8">&#x1F327;</div>
+                            <div class="co9">&#x1F327;</div>
+                            <div class="co10">&#x1F328;</div>
+                            <div class="co11">&#x1F328;</div>
+                            <div class="co12">&#x1F329;</div>
+                        
+                            
+                            
+                            <div class="i1 ball">1</div>
+                            <div class="i2 ball">2</div>
+                            <div class="i3 ball">3</div>
+                            <div class="i4 ball">4</div>
+                            <div class="i5 ball">5</div>
+                            <div class="i6 ball">6</div>
+                            <div class="i7 ball">7</div>
+                            <div class="i8 ball">8</div>
+                            <div class="i9 ball">9</div>
+                            <div class="i10 ball">10</div>
+                            <div class="i11 ball">11</div>
+                            <div class="i12 ball">12</div>
+                        
+                            <div id="ccircle"></div>
+                        
+                    
+                        </Div>
+                        </Div>
+                        </div>
+                </div>
+            </section>
+        </main>
+    <footer>
+        Today's Date: <span id="today"></span>
+        <script src="/weather/locations/js/library.js"></script>
+        <script src="/weather/locations/js/functions.js"></script>
+        <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
+    </footer>
+    
+    
+</body>
+</html>
