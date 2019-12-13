@@ -1,0 +1,45 @@
+@media (min-width: 1000px) {
+img .card1{
+ margin-left: auto;
+ margin-right: auto;
+}
+.stock {
+    max-width: 80%;
+    padding: 5%;
+  }
+  picture .stock{
+    max-width: 80%;
+   }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #containers{
+      max-width: 1200px;
+      min-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .flex {
+    justify-content: space-evenly;
+  }
+  .clear{
+    background-image: url("/weather/locations/img/clear.jpg");
+}
+
+.rain{
+    background-image: url("/weather/locations/img/rain.jpg");
+}
+
+.fog{
+    background-image: url("/weather/locations/img/fog.jpg");
+}
+
+.snow{
+    background-image: url("/weather/locations/img/snow.jpg");
+}
+
+.clouds{
+    background-image: url("/weather/locations/img/clouds.jpg");
+}
+}

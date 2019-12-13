@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Matias Salazar">
+    <meta name="description" content="Assignment portal for Matias Salazar in CIT 230: Web Frontend Development at Brigham Young University - Idaho">   
+    
+    <title id="page-title"> Temple Suites & Inn | Home</title>
+    <link rel="stylesheet" href="/Final/css/normalize.css">
+    <link rel="stylesheet" href="/Final/css/mobile.css">
+    <link rel="stylesheet" href="/Final/css/big.css">
+    <link rel="stylesheet" href="/Final/css/bigger.css">
+
+
+    
+</head>
+<body>
+    <header>
+        <div class="banner">
+        <img class="img_icon" src="/Final/images/Screen Shot 2019-12-11 at 10.22.27 AM.png" alt="page-icon">
+        <div class=title> Temple Suites & Inn </div>
+        </div>
+    </header>
+    
+    <nav>
+            <button onclick="toggleMenu()">&#9832; Menu</button>
+                <ul id="primaryNav" class="navigation hide">
+                        <li><a href="/Final/Home.html">Home</a></li>
+                        <li><a href="/Final/Temple.html">Temple</a></li>
+                        <li><a href="/Final/Reservations.html">Resevations</a></li>
+                        <li><a href="/Final/Services.html">Services</a></li>
+                        <li><a href="/Final/Contact.html">Conact Us</a></li>
+                </ul>
+    </nav>
+    <main>
+        <div id="form" class="container_form">
+                <h2>Reservation Information</h2>
+                <form>
+                        <label for="name">Name:</label>
+                        <input id="name" type="string"><br><br>
+                        <label for="email" size="50">Email:</label>
+                        <input id="email" type="string"><br><br>
+                        <label for="phone">Phone:</label>
+                        <input id="phone" type="string"><br><br>
+                        <label for="city">City:</label>
+                        <input id="city" type="string"><br><br>
+                        <label for="state">State:</label>
+                        <input id="state" type="string"><br><br>
+                        <label for="guests">Number of Guests:</label>
+                        <input id="guests" type="number" min="1" max="4"><br><br>
+                        <label for="resDate">Reservation Date Start:</label>
+                        <input id="resDate" type="date"><br><br>
+                        <label for="resDateEnd">Reservation Date End:</label>
+                        <input id="resDateEnd" type="date"><br><br>
+                        <label for="comments">Comments:</label>
+                        <input id="comments" type="string"><br><br>
+                        <button id="submit">Submit</button>
+                </form>
+        </div>
+
+  
+  <div class="hideme" id="resResult">
+  <div class="form-results">
+  <h2 class="hideme" id="resResultTitle">Reservation Details</h2>
+  <p id="nameResult"></p>
+  <p id="emailResult"> </p>
+  <p id="phoneResult"> </p>
+  <p id="cityResult"> </p>
+  <p id="stateResult"> </p>
+  <p id="guestsResult"> </p>
+  <p id="resDateResult"> </p>
+  <p id="resDateEndResult"> </p>
+  <p id="commentsResult"> </p>
+  <h2 >Thank you for choosing us. An email comfirmation will also be sent.</h2>
+  </div>
+ </div>
+</div>
+                  
+    </main>
+         
+    <footer>
+        Today's Date: <span id="today"></span>
+        <script src="/Final/js/survey.js"></script>
+        <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
+    </footer>
+    
+    
+</body>
+</html>

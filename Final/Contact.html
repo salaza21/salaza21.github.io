@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Matias Salazar">
+    <meta name="description" content="Assignment portal for Matias Salazar in CIT 230: Web Frontend Development at Brigham Young University - Idaho">   
+    
+    <title id="page-title"> Temple Suites & Inn | Home</title>
+    <link rel="stylesheet" href="/Final/css/normalize.css">
+    <link rel="stylesheet" href="/Final/css/mobile.css">
+    <link rel="stylesheet" href="/Final/css/big.css">
+    <link rel="stylesheet" href="/Final/css/bigger.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class="banner">
+        <img class="img_icon" src="/Final/images/Screen Shot 2019-12-11 at 10.22.27 AM.png"alt="page-icon">
+        <div class=title> Temple Suites & Inn </div>
+        </div>
+    </header>
+    
+    <nav>
+            <button onclick="toggleMenu()">&#9832; Menu</button>
+                <ul id="primaryNav" class="navigation hide">
+                        <li><a href="/Final/Home.html">Home</a></li>
+                        <li><a href="/Final/Temple.html">Temple</a></li>
+                        <li><a href="/Final/Reservations.html">Resevations</a></li>
+                        <li><a href="/Final/Services.html">Services</a></li>
+                        <li><a href="/Final/Contact.html">Conact Us</a></li>
+                </ul>
+    </nav>
+    <main>
+    <div class="container-contact">
+        <div class="container-text-contact">
+            <h3>Do you have any inqueries?</h3>
+            <p> Conatct us by sending an email to templesuitsandin@tsi.com, visiting our offices located at 
+                4800 Montgomery Ln #300, Bethesda, MD 20814 or by simply filling out the contact form on our website.
+                 A representative will reach out to you as a soon as possible.
+            </p>
+
+        </div>
+        <div class="container-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.4048370285327!2d-77.09772048463415!3d38.983255949483734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97b6b3b5b43%3A0x9c8eb1c5547b83eb!2s4800%20Montgomery%20Ln%20%23300%2C%20Bethesda%2C%20MD%2020814!5e0!3m2!1ses!2sus!4v1576093974093!5m2!1ses!2sus" 
+                 allowfullscreen=""></iframe>
+
+        </div>
+        <div class="container-form">
+                <div class="container_form">
+                    <div id="tohide">
+                        <h2>Contact Form</h2>
+                            <form>
+                             <label for="name">Name:</label>
+                             <input id="name" type="string"><br><br>
+                             <label for="email" size="50">Email:</label>
+                             <input id="email" type="string"><br><br>
+                             <label for="phone">Phone:</label>
+                             <input id="phone" type="string"><br><br>
+                             <label for="comments">Comments:</label>
+                             <input id="comments" type="string"><br><br>
+                             <button id="submit-2">Submit</button>
+                            </form>
+                        </div>
+                    <div class="hideme" id="thanks">
+                    <h2>Thank you for contacting us.</h2><br><br>
+                    <h3>A representative will contact you in 48 hours.</h3>
+                    </div>
+                    </div>
+
+        </div>
+    </div>
+    </main>
+         
+    <footer>
+        Today's Date: <span id="today"></span>
+        <script src="/Final/js/survey2.js"></script>
+        <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Matias Salazar">
+    <meta name="description" content="Assignment portal for Matias Salazar in CIT 230: Web Frontend Development at Brigham Young University - Idaho">   
+    
+    <title id="page-title"> Temple Suites & Inn | Home</title>
+    <link rel="stylesheet" href="/Final/css/normalize.css">
+    <link rel="stylesheet" href="/Final/css/mobile.css">
+    <link rel="stylesheet" href="/Final/css/big.css">
+    <link rel="stylesheet" href="/Final/css/bigger.css">
+   
+
+    
+</head>
+<body>
+    <header>
+        <div class="banner">
+        <img class="img_icon" src="/Final/images/Screen Shot 2019-12-11 at 10.22.27 AM.png"alt="page-icon">
+        <div class=title> Temple Suites & Inn </div>
+        </div>
+    </header>
+    
+    <nav>
+            <button onclick="toggleMenu()">&#9832; Menu</button>
+                <ul id="primaryNav" class="navigation hide">
+                        <li><a href="/Final/Home.html">Home</a></li>
+                        <li><a href="/Final/Temple.html">Temple</a></li>
+                        <li><a href="/Final/Reservations.html">Resevations</a></li>
+                        <li><a href="/Final/Services.html">Services</a></li>
+                        <li><a href="/Final/Contact.html">Conact Us</a></li>
+                </ul>
+    </nav>
+    <main>
+        <div class="invitation-container">
+            <h2> Looking for a relaxing experience? </h2>
+            <h3> Join us today. Just click here to make a reservation.</h3>
+            <h2 class="reserve-now"><a href="/Final/Reservations.html">Reserve Now</h2></a>
+        </div>
+        <div class="container-history">
+            <h3> We are commited to serve you</h3>
+            <p> In Temple Suites and Inn we make our biggest priority to make your stay convinient, comfortable and memorable. 
+                It is our focus to bring peace and respect in order to convey a fit place for the dwelling of spiritual thoughts,
+                thus making people come closer to the Lord. <br> <br>
+                Our commitment towards the spirtual growth is not limited to the closeness and emphasis that we have on the House of the Lord. 
+                We have recieved over 5000 people in the last two years, with great reviews and complete satisfaction. 
+                We would love to make you a part of our happy customer base.
+            </p>
+        </div>
+        <div class="invitation-container">
+            <h2> Temple Spotlight: Rexburg Temple</h2>
+        <div class="container-spotlight">
+            <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/Final/images/rEXB_TEMPLE.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/Final/images/rex_Temple_2.jpg"  style="width:100%">
+          <div class="text"></div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/Final/images/rex_temple_3.jpg"  style="width:100%">
+          <div class="text"></div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    
+      </div>
+    </div>
+    </div>
+    </main>
+         
+    <footer>
+        Today's Date: <span id="today"></span>
+        <script src="/Final/js/slides.js"></script>
+        <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
+    </footer>
+    
+    
+</body>
+</html>

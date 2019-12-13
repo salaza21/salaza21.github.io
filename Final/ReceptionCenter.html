@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Matias Salazar">
+    <meta name="description" content="Assignment portal for Matias Salazar in CIT 230: Web Frontend Development at Brigham Young University - Idaho">   
+    
+    <title id="page-title"> Temple Suites & Inn | Home</title>
+    <link rel="stylesheet" href="/Final/css/normalize.css">
+    <link rel="stylesheet" href="/Final/css/mobile.css">
+    <link rel="stylesheet" href="/Final/css/big.css">
+    <link rel="stylesheet" href="/Final/css/bigger.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class="banner">
+        <img class="img_icon" src="/Final/images/Screen Shot 2019-12-11 at 10.22.27 AM.png"alt="page-icon">
+        <div class=title> Temple Suites & Inn </div>
+        </div>
+    </header>
+    
+    <nav>
+            <button onclick="toggleMenu()">&#9832; Menu</button>
+                <ul id="primaryNav" class="navigation hide">
+                        <li><a href="/Final/Home.html">Home</a></li>
+                        <li><a href="/Final/Temple.html">Temple</a></li>
+                        <li><a href="/Final/Reservations.html">Resevations</a></li>
+                        <li><a href="/Final/Services.html">Services</a></li>
+                        <li><a href="/Final/Contact.html">Conact Us</a></li>
+                </ul>
+    </nav>
+    <main>
+        <div class="container-services">
+
+                <div class="container-spotlight">
+                        <!-- Slideshow container -->
+                <div class="slideshow-container">
+            
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="/Final/images/rec_cen1.jpg" style="width:100%">
+                      <div class="text">Caption Text</div>
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="/Final/images/rec_cen2.jpg"  style="width:100%">
+                      <div class="text">Caption Two</div>
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="/Final/images/rec_cen3.jpeg"  style="width:100%">
+                      <div class="text">Caption Three</div>
+                    </div>
+                  
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  
+                  <!-- The dots/circles -->
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                    </div>
+                    <div class="container-reception">
+                    <h2>
+                            Looking for a memorable experience?
+                    </h2>
+            <h3>Come join us at Temple Suits & Inn, where we will make your dream gathering come true. Your guests will be treated to:
+            </h3>
+            <li>Award winning catering and restaurant services.</li>
+            <li>Indoor and outdoor venues.</li>
+            <li>Top of the line conference centers.</li>
+            <li>Great and accomoditing parking options.</li>
+            <li>A great enviroment.</li>
+
+            <h2>
+                    <a href="/Final/Contact.html">Contact us now</a>
+            </h2>
+        </div>
+                    
+        
+        </div>
+    </div>
+    </main>
+         
+    <footer>
+        Today's Date: <span id="today"></span>
+        <script src="/Final/js/slides.js"></script>
+        <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
+    </footer>
+    
+    
+</body>
+</html>
