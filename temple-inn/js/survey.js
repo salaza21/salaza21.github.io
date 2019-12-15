@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   resDateEnd.innerHTML = 'Departure Date: ' + resList[0].resDateEnd;
   let temple = document.querySelector('#resTempleResult');
   temple.innerHTML = 'Temple Location: ' + resList[0].temple;
+  console.log('Temple Location: ' + resList[0].temple);
   let comments = document.querySelector('#commentsResult');
   comments.innerHTML = 'Comments: ' + resList[0].comments;
   }
