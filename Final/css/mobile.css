@@ -56,6 +56,7 @@ body h2, h3{
 main {
     grid-row: 3/4;
     grid-column: 1/4;
+    max-width: 100%;
 }
 
 nav {
@@ -105,7 +106,7 @@ footer {
 
  nav{
     background-color: #FBEEC1;
-    position: center;
+    position: relative;
   }
   nav button{
     margin: .2rem;
@@ -119,10 +120,10 @@ footer {
   
   nav ul li a{
     display: block;
-    padding: .8rem;
     color: #000;
     border-bottom: 1px solid black;
-    background: white;
+    background: #f6da79;
+    padding: 0;
   }
   
   
@@ -187,4 +188,137 @@ footer {
   .content-collapse p{
     font-size: 1rem;
   }
+
+  .invitation-container {
+    border-style: solid;
+    border-color: black;
+    background-color: #FBEEC1;
+    justify-content: center;
+    margin: .5rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .container-history {
+    border-style: solid;
+    border-color: black;
+    background-color: #F8E194;
+    justify-content: center;
+    margin: .5rem;
+    max-width: 100%;
+    text-align: center;
+  }
+  .container_form {
+    background-color: #659DBD;
+    display: block;
+    padding: 5%;
+    min-height: 100%;
+    border-color: black;
+    border-style: solid;
+    max-width: fit-content;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+    .container_spec_serv {
+      display: block;
+      max-width: 100%;
+      background-color: #659DBD;
+      border-style: solid;
+      border-color: black;
+      margin-bottom: 3%;
+  }
+  .right li, h2{
+   margin: 5%;
+  }
+
+  .container_free_amen {
+    display: block;
+      max-width: 100%;
+      background-color: #F8E194;
+      border-style: solid;
+      border-color: black;
+      margin-bottom: 3%;
+  }
+  .left li, h2{
+    margin: 5%;
+   }
+  .container-outside-ameneties {
+    display: block;
+    max-width: 100%;
+    background-color: #659DBD;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.container-services {
+  font-size: 2em;
+  max-width: 100%;
+}
+
+.container_form button{
+  background-color: #f6da79;
+
+}
+
+.container-text-contact {
+  text-align: center;
+}
+
+.container-map iframe {
+  margin-left: 2%;
+}
+.container-services img {
+  max-width: 100%;
+}
+.container-services h2, p{
+  text-align: center;
+  font-size: 1em;
+}
+
+.container-reception h3 {
+  font-size: 1em;
+}
+
+.container-reception {
+  border-style: solid;
+  border-color: black;
+  background-color: #F8E194;
+  justify-content: center;
+  margin: .5rem;
+  max-width: 100%;
+}
+
+.form-results {
+  background-color: #F8E194;
+  border-color: black;
+  padding: 5%;
+  margin: 5%;
+  border-style: solid;
+}
+.form-results h2{
+  font-size: 1.5em;
+}
+.slidesow-container img {
+  max-width: 100%;
+}
+
+.mySlides.fade img{
+  max-width: 100%;
+}
+.attributions-container {
+  border-style: solid;
+  border-color: black;
+  background-color: #FBEEC1;
+  justify-content: center;
+  margin: .5rem;
+  max-width: 100%;
+  text-align: center;
+  min-height: 80%;
+  padding-bottom: 70%;
+}
+.attributions-container li{
+  margin: 5%;
+}
 }

@@ -188,8 +188,11 @@ li{
 
 .navigation {
   padding:0;
-}
 
+}
+.nav ul{
+  z-index: 10;
+}
 .stock {
   max-width: 90%;
 }

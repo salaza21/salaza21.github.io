@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     state: document.querySelector('#state').value,
     guests: document.querySelector('#guests').value,
     resDate: document.querySelector('#resDate').value,
-    resDate: document.querySelector('#resDateEnd').value,
+    resDateEnd: document.querySelector('#resDateEnd').value,
     comments: document.querySelector('#comments').value
     }
   // adds reservation to the end of the array of all reservations
@@ -33,6 +33,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
     
     
   // display the results
+  if (document.querySelector('#name').value != null && document.querySelector('#city').value != null &&
+  document.querySelector('#email').value != null && document.querySelector('#state').value != null &&
+  document.querySelector('#phone').value != null &&
+  document.querySelector('#guests').value != null &
+  document.querySelector('#resDate').value != null &&
+  document.querySelector('#resDateEnd').value != null &&
+  document.querySelector('#comments').value != null ){
   document.querySelector("#resResult").classList.remove("hideme");
   document.querySelector("#resResultTitle").classList.remove("hideme");
   document.querySelector("#form").classList.remove("container_form");
@@ -56,5 +63,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
   resDateEnd.innerHTML = 'Departure Date: ' + resList[0].resDateEnd;
   let comments = document.querySelector('#commentsResult');
   comments.innerHTML = 'Comments: ' + resList[0].comments;
-  
+  }
   }

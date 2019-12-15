@@ -172,6 +172,7 @@ footer a, p {
 
 .container-spotlight {
   max-width: 100%;
+  justify-content: center;
 }
 
 .container-spotlight img{
@@ -378,8 +379,6 @@ footer a, p {
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -389,6 +388,7 @@ footer a, p {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  text-align: center;
 }
 
 /* Position the "next button" to the right */
@@ -454,5 +454,16 @@ footer a, p {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.attributions-container {
+  border-style: solid;
+  border-color: black;
+  background-color: #FBEEC1;
+  justify-content: center;
+  margin: .5rem;
+  max-width: 100%;
+  text-align: center;
+  min-height: 80%;
 }
 }

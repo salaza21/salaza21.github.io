@@ -8,17 +8,17 @@
     <meta name="description" content="Assignment portal for Matias Salazar in CIT 230: Web Frontend Development at Brigham Young University - Idaho">   
     
     <title id="page-title"> Temple Suites & Inn | Temples</title>
-    <link rel="stylesheet" href="/Final/css/normalize.css">
-    <link rel="stylesheet" href="/Final/css/mobile.css">
-    <link rel="stylesheet" href="/Final/css/big.css">
-    <link rel="stylesheet" href="/Final/css/bigger.css">
+    <link rel="stylesheet" href="/final/css/normalize.css">
+    <link rel="stylesheet" href="/final/css/mobile.css">
+    <link rel="stylesheet" href="/final/css/big.css">
+    <link rel="stylesheet" href="/final/css/bigger.css">
 
     
 </head>
 <body>
     <header>
         <div class="banner">
-        <img class="img_icon" src="/Final/images/Screen Shot 2019-12-11 at 10.22.27 AM.png" alt="page-icon">
+        <img class="img_icon" src="/final/images/Screen Shot 2019-12-11 at 10.22.27 AM.png" alt="page-icon">
         <div class=title> Temple Suites & Inn </div>
         </div>
     </header>
@@ -26,20 +26,77 @@
     <nav>
             <button onclick="toggleMenu()">&#9832; Menu</button>
                 <ul id="primaryNav" class="navigation hide">
-                    <li><a href="/Final/Home.html">Home</a></li>
-                    <li><a href="/Final/Temple.html">Temple</a></li>
-                    <li><a href="/Final/Reservations.html">Resevations</a></li>
-                    <li><a href="/Final/Services.html">Services</a></li>
-                    <li><a href="/Final/Contact.html">Contact Us</a></li>
+                    <li><a href="/final/home.html">Home</a></li>
+                        <li><a href="/final/temple.html">Temple</a></li>
+                        <li><a href="/final/reservations.html">Resevations</a></li>
+                        <li><a href="/final/services.html">Services</a></li>
+                        <li><a href="/final/contact.html">Contact Us</a></li>
                 </ul>
     </nav>
     <main>
         <div class="flex">
             <div class="card">
-                    <img src="/Final/images/rEXB_TEMPLE.jpg" alt="temple1" style="width:100%">
+                    <img src="/final/images/rEXB_TEMPLE.jpg" alt="temple1" style="width:100%">
                     <div class="container_card">
                       <h4><b>Rexburg Temple</b></h4>
-                      <button type="button" class="collapsible">Closed Dates</button>
+                      <button type="button" class="collapsible">Address</button>
+                      <div class="content-collapse">
+                      <p >750 S 2nd E
+                        Rexburg ID 83440-5404
+                        United States </p>
+                    </div>
+                    <button type="button" class="collapsible">Telephone</button>
+                      <div class="content-collapse">
+                      <p>(1) 208-656-0880</p>
+                      
+                    </div>
+                    <button type="button" class="collapsible">Services</button>
+                      <div class="content-collapse">
+                          <li>Clothing rental available</li>
+                          <li>No cafeteria available</li>
+                          <li>No patron housing available</li>
+                          <li>Distribution center nearby</li>
+                    </div>
+                    <button type="button" class="collapsible">Baptistry Schedules</button>
+                    <div class="content-collapse">
+                    <p>1:00 PM - 2:00 PM
+                    Appointments Only</p>
+                    <p>2:00 PM - 3:00 PM
+                    Walk-ins Only</p>
+                    <p>3:00 PM - 4:00 PM
+                    Appointments Only</p>
+                    <p>4:00 PM - 5:00 PM
+                    Walk-ins Only</p>
+                    <p>5:00 PM - 6:00 PM
+                    Appointments Only</p>
+                    <p>6:00 PM - 7:00 PM
+                    Walk-ins Only</p>
+                    <p>7:00 PM - 8:00 PM
+                    Appointments Only</p>
+                  </div>
+
+                    <button type="button" class="collapsible">Session Schedules</button>
+                      <div class="content-collapse">
+                          <p>1:30 PM
+                          Walk-ins Only</p>
+                          <p>2:15 PM
+                          Walk-ins Only</p>
+                          <p>3:00 PM
+                          Walk-ins and Appointments</p>
+                          <p>3:45 PM
+                          Walk-ins Only</p>
+                          <p>4:30 PM
+                          Walk-ins and Appointments</p>
+                          <p>5:15 PM
+                          Walk-ins and Appointments</p>
+                          <p>6:00 PM
+                          Walk-ins Only</p>
+                          <p>6:45 PM
+                          Walk-ins Only</p>
+                          <p>7:30 PM
+                          Walk-ins and Appointments</p>
+                    </div>
+                    <button type="button" class="collapsible">Closed Dates</button>
                       <div class="content-collapse">
                       <p id="t31"></p>
                       <p id="t32">Open Times</p>
@@ -51,12 +108,134 @@
                       <p id="t38">Open Times</p>
                       <p id="t39">Open Times</p>
                     </div>
+                    <button type="button" class="collapsible">Weather</button>
+                        <div class="content-collapse">
+                          <p><a href="https://weather.com/weather/today/l/USID0215:1:US">Check Weather</a></p>
+                        </div>
                     </div>
-                  </div>
+            </div>
                   <div class="card">
-                        <img src="/Final/images/provo_temple.jpg" alt="temple2" style="width:100%">
+                        <img src="/final/images/provo_temple.jpg" alt="temple2" style="width:100%">
                         <div class="container_card">
                           <h4><b>Provo Temple</b></h4>
+                          <button type="button" class="collapsible">Address</button>
+                      <div class="content-collapse">
+                      <p >2200 Temple Hill Dr
+                          Provo UT 84604-1775
+                          United States </p>
+                    </div>
+                    <button type="button" class="collapsible">Telephone</button>
+                      <div class="content-collapse">
+                      <p>(1) 801-375-5775</p>
+                      
+                    </div>
+                    <button type="button" class="collapsible">Services</button>
+                      <div class="content-collapse">
+                          <li>Clothing rental available</li>
+                          <li>Cafeteria available</li>
+                          <li>No patron housing available</li>
+                          <li>Distribution center nearby</li>
+                    </div>
+                    <button type="button" class="collapsible">Baptistry Schedules</button>
+                    <div class="content-collapse">
+                    <p>5:30 AM - 9:00 PM
+                        Walk-ins and Appointments</p>
+                  </div>
+
+                    <button type="button" class="collapsible">Session Schedules</button>
+                      <div class="content-collapse">
+                          <p>5:40 AM
+                          Walk-ins Only</p>
+                          <p>6:00 AM
+                          Walk-ins Only</p>
+                          <p>6:20 AM
+                          Walk-ins Only</p>
+                          <p>6:40 AM
+                          Walk-ins Only</p>
+                          <p>7:00 AM
+                          Walk-ins Only</p>
+                          <p>7:20 AM
+                          Walk-ins Only</p>
+                          <p>7:40 AM
+                          Walk-ins Only</p>
+                          <p>8:00 AM
+                          Walk-ins and Appointments</p>
+                          <p>8:20 AM
+                          Walk-ins Only</p>
+                          <p>8:40 AM
+                          Walk-ins Only</p>
+                          <p>9:00 AM
+                          Walk-ins and Appointments</p>
+                          <p>9:20 AM
+                          Walk-ins Only</p>
+                          <p>9:40 AM
+                          Walk-ins and Appointments</p>
+                          <p>10:00 AM
+                          Walk-ins Only</p>
+                          <p>10:20 AM
+                          Walk-ins Only</p>
+                          <p>10:40 AM
+                          Walk-ins Only</p>
+                          <p>11:00 AM
+                          Walk-ins Only</p>
+                          <p>11:20 AM
+                          Walk-ins Only</p>
+                          <p>11:40 AM
+                          Walk-ins and Appointments</p>
+                          <p>12:00 PM
+                          Walk-ins Only</p>
+                          <p>12:20 PM
+                          Walk-ins Only</p>
+                          <p>12:40 PM
+                          Walk-ins Only</p>
+                          <p>1:00 PM
+                          Walk-ins Only</p>
+                          <p>1:20 PM
+                          Walk-ins Only</p>
+                          <p>1:40 PM
+                          Walk-ins and Appointments</p>
+                          <p>2:00 PM
+                          Walk-ins Only</p>
+                          <p>2:20 PM
+                          Walk-ins Only</p>
+                          <p>2:40 PM
+                          Walk-ins and Appointments</p>
+                          <p>3:00 PM
+                          Walk-ins Only</p>
+                          <p>3:20 PM
+                          Walk-ins and Appointments</p>
+                          <p>3:40 PM
+                          Walk-ins Only</p>
+                          <p>4:00 PM
+                          Walk-ins Only</p>
+                          <p>4:20 PM
+                          Walk-ins Only</p>
+                          <p>4:40 PM
+                          Walk-ins and Appointments</p>
+                          <p>5:00 PM
+                          Walk-ins Only</p>
+                          <p>5:20 PM
+                          Walk-ins Only</p>
+                          <p>5:40 PM
+                          Walk-ins Only</p>
+                          <p>6:00 PM
+                          Walk-ins and Appointments - ASL</p>
+                          <p>6:20 PM
+                          Walk-ins and Appointments</p>
+                          <p>6:40 PM
+                          Walk-ins Only</p>
+                          <p>7:00 PM
+                          Walk-ins Only</p>
+                          <p>7:20 PM
+                          Walk-ins and Appointments</p>
+                          <p>7:40 PM
+                          Walk-ins Only</p>
+                          <p>8:00 PM
+                          Walk-ins Only - Tongan</p>
+                          <p>8:20 PM
+                          Walk-ins Only</p>
+                    </div>
+                    
                           <button type="button" class="collapsible">Closed Dates</button>
                           <div class="content-collapse">
                           <p id="t51">Open Times</p>
@@ -69,12 +248,71 @@
                           <p id="t58">Open Times</p>
                           <p id="t59">Open Times</p>
                         </div>
-                      </div>
+                        <button type="button" class="collapsible">Weather</button>
+                        <div class="content-collapse">
+                          <p><a href="https://weather.com/weather/today/l/Provo+UT?canonicalCityId=1f73865cd4f81435bc3ae19b85da4aee904fcb750c9d4f25dee56d9263cc932f">Check Weather</a></p>
+                        </div> 
+                    </div>
                       </div>
                       <div class="card">
-                            <img src="/Final/images/oquirrh_temple.jpg" alt="temple3" style="width:100%">
+                            <img src="/final/images/oquirrh_temple.jpg" alt="temple3" style="width:100%">
                             <div class="container_card">
                               <h4><b>Oquirrh Temple</b></h4>
+                              <button type="button" class="collapsible">Address</button>
+                      <div class="content-collapse">
+                      <p >11022 S 4000 W
+                          South Jordan UT 84009-5797
+                          United States</p>
+                    </div>
+                    <button type="button" class="collapsible">Telephone</button>
+                      <div class="content-collapse">
+                      <p>(1) 801-878-3800</p>
+                      
+                    </div>
+                    <button type="button" class="collapsible">Services</button>
+                      <div class="content-collapse">
+                          <li>No clothing rental available</li>
+                          <li>No cafeteria available</li>
+                          <li>No patron housing available</li>
+                          <li>Distribution center nearby</li>
+                    </div>
+                    <button type="button" class="collapsible">Baptistry Schedules</button>
+                    <div class="content-collapse">
+                    <p>7:00 AM - 8:30 PM
+                        Walk-ins Only</p>
+                  </div>
+
+                    <button type="button" class="collapsible">Session Schedules</button>
+                      <div class="content-collapse">
+                          <p>7:00 AM
+                          Walk-ins Only</p>
+                          <p> 8:00 AM
+                          Walk-ins Only</p>
+                          <p>9:00 AM
+                          Walk-ins Only</p>
+                          <p>10:00 AM
+                          Walk-ins Only</p>
+                          <p>11:00 AM
+                          Walk-ins Only</p>
+                          <p>12:00 PM
+                          Walk-ins Only</p>
+                          <p>1:00 PM
+                          Walk-ins Only</p>
+                          <p>2:00 PM
+                          Walk-ins Only</p>
+                          <p>3:00 PM
+                          Walk-ins Only</p>
+                          <p>4:00 PM
+                          Walk-ins Only</p>
+                          <p>5:00 PM
+                          Walk-ins Only</p>
+                          <p>6:00 PM
+                          Walk-ins Only</p>
+                          <p>7:00 PM
+                          Walk-ins Only</p>
+                          <p>8:00 PM
+                          Walk-ins Only</p>
+                    </div>
                               <button type="button" class="collapsible">Closed Dates</button>
                               <div class="content-collapse">
                               <p id="t61">Open Times</p>
@@ -88,12 +326,68 @@
                               <p id="t69">Open Times</p>
                               <p id="t610">Open Times</p>
                             </div>
+                            <button type="button" class="collapsible">Weather</button>
+                        <div class="content-collapse">
+                          <p><a href="https://weather.com/weather/today/l/5497c6b226aac1defe9a7c0cec001b7842ad95c711cda8f6576f764c2dbc1597">Check Weather</a></p>
+                        </div> 
+                  
                           </div>
                           </div>
-                          <div class="card">
-                                <img src="/Final/images/boise_temple.jpg" alt="temple4" style="width:100%">
-                                <div class="container_card">
-                                  <h4><b>Boise Temple</b></h4>
+                  <div class="card">
+                   <img src="/final/images/boise_temple.jpg" alt="temple4" style="width:100%">
+                    <div class="container_card">
+                     <h4><b>Boise Temple</b></h4>
+                       <button type="button" class="collapsible">Address</button>
+                      <div class="content-collapse">
+                      <p >1211 S Cole Rd
+                          Boise ID 83709-1871
+                          United States</p>
+                    </div>
+                    <button type="button" class="collapsible">Telephone</button>
+                      <div class="content-collapse">
+                      <p>(1) 208-322-4422</p>
+                      
+                    </div>
+                    <button type="button" class="collapsible">Services</button>
+                      <div class="content-collapse">
+                          <li>No clothing rental available</li>
+                          <li>No cafeteria available</li>
+                          <li>No patron housing available</li>
+                          <li>Distribution center nearby</li>
+                    </div>
+                    <button type="button" class="collapsible">Baptistry Schedules</button>
+                    <div class="content-collapse">
+                        <p>5:00 AM - 9:00 AM
+                        Walk-ins Only</p>
+                        <p>9:00 AM - 2:00 PM
+                        Walk-ins and Appointments</p>
+                        <p>2:00 PM - 4:30 PM
+                        Walk-ins Only</p>
+                        <p>4:30 PM - 9:30 PM
+                        Church Groups - Appointments Only</p>
+                  </div>
+
+                    <button type="button" class="collapsible">Session Schedules</button>
+                      <div class="content-collapse">
+                          <p>1:30 PM
+                          Walk-ins Only</p>
+                          <p>2:15 PM
+                          Walk-ins Only</p>
+                          <p>3:00 PM
+                          Walk-ins and Appointments</p>
+                          <p>3:45 PM
+                          Walk-ins Only</p>
+                          <p>4:30 PM
+                          Walk-ins and Appointments</p>
+                          <p>5:15 PM
+                          Walk-ins and Appointments</p>
+                          <p>6:00 PM
+                          Walk-ins Only</p>
+                          <p>6:45 PM
+                          Walk-ins Only</p>
+                          <p>7:30 PM
+                          Walk-ins and Appointments</p>
+                    </div>
                                   <button type="button" class="collapsible">Closed Dates</button>
                                   <div class="content-collapse">
                                   <p id="t41">Open Times</p>
@@ -108,34 +402,130 @@
                                   <p id="t410">Open Times</p>
 
                                 </div>
+                                <button type="button" class="collapsible">Weather</button>
+                        <div class="content-collapse">
+                          <p><a href="https://weather.com/weather/today/l/USID0025:1:US">Check Weather</a></p>
+                        </div> 
                                 </div>
                               </div>    
                               <div class="card">
-                                  <img src="/Final/images/Wash_temple.jpg" alt="temple5" style="width:100%">
+                                  <img src="/final/images/Wash_temple.jpg" alt="temple5" style="width:100%">
                                   <div class="container_card">
                                     <h4><b>Washington Temple</b></h4>
+                                    <button type="button" class="collapsible">Address</button>
+                      <div class="content-collapse">
+                      <p >9900 Stoneybrook Dr
+                          Kensington MD 20895-3199
+                          United States </p>
+                    </div>
+                    <button type="button" class="collapsible">Telephone</button>
+                      <div class="content-collapse">
+                      <p>Closed during Renovation</p>
+                      
+                    </div>
+                    <button type="button" class="collapsible">Services</button>
+                      <div class="content-collapse">
+                          <li>Closed during Renovation</li>
+                      
+                    </div>
+                    <button type="button" class="collapsible">Baptistry Schedules</button>
+                    <div class="content-collapse">
+                    <p>Closed during Renovation</p>
+                  </div>
+
+                    <button type="button" class="collapsible">Session Schedules</button>
+                      <div class="content-collapse">
+                          <p>Closed during Renovation</p>
+                    </div>
+                  
                                     <button type="button" class="collapsible">Closed Dates</button>
                                     <div class="content-collapse">
                                     <p id="t21">Open Times</p>
                                   </div>
+                                  <button type="button" class="collapsible">Weather</button>
+                        <div class="content-collapse">
+                          <p><a href="https://weather.com/weather/today/l/c1535f42ba5fc52449e416514aca69b3b2a16aae4b89abd6c92e662f7a89c02f">Check Weather</a></p>
+                        </div> 
                                   </div>
                                 </div> 
                                 <div class="card">
-                                    <img src="/Final/images/IFALLS_TEMPLE.jpg" alt="temple6" style="width:100%">
+                                    <img src="/final/images/IFALLS_TEMPLE.jpg" alt="temple6" style="width:100%">
                                     <div class="container_card">
                                       <h4><b>Idaho Falls</b></h4>
-                                      <button type="button" class="collapsible">Closed Dates</button>
-                                      <div class="content-collapse">
-                                      <p id="t11">Open Times</p>
-                                      <p id="t12">Open Times</p>
-                                      <p id="t13">Open Times</p>
-                                      <p id="t14">Open Times</p>
-                                      <p id="t15">Open Times</p>
-                                      <p id="t16">Open Times</p>
-                                      <p id="t17">Open Times</p>
-                                      <p id="t18">Open Times</p>
-                                      <p id="t19">Open Times</p>
-                                    </div>
+                                      <button type="button" class="collapsible">Address</button>
+                      <div class="content-collapse">
+                      <p >1000 Memorial Dr
+                          Idaho Falls ID 83402-3410
+                          United States </p>
+                    </div>
+                    <button type="button" class="collapsible">Telephone</button>
+                      <div class="content-collapse">
+                      <p>(1) 208-522-7669</p>
+                      
+                    </div>
+                    <button type="button" class="collapsible">Services</button>
+                      <div class="content-collapse">
+                          <li>Clothing rental available</li>
+                          <li>Cafeteria available</li>
+                          <li>No patron housing available</li>
+                          <li>Distribution center nearby</li>
+                    </div>
+                    <button type="button" class="collapsible">Baptistry Schedules</button>
+                    <div class="content-collapse">
+                    <p>6:00 AM - 8:30 PM
+                        Walk-ins and Appointments</p>
+                  </div>
+
+                    <button type="button" class="collapsible">Session Schedules</button>
+                      <div class="content-collapse">
+                          <p>5:00 AM
+                              Walk-ins Only</p>
+                              <p>6:00 AM
+                              Walk-ins Only</p>
+                              <p>7:00 AM
+                              Walk-ins Only</p>
+                              <p>8:00 AM
+                              Walk-ins Only</p>
+                              <p>9:00 AM
+                              Walk-ins Only</p>
+                              <p>10:00 AM
+                              Walk-ins Only</p>
+                              <p>11:00 AM
+                              Walk-ins Only</p>
+                              <p>12:00 PM
+                              Walk-ins and Appointments</p>
+                              <p>1:00 PM
+                              Walk-ins and Appointments</p>
+                              <p>2:00 PM
+                              Walk-ins and Appointments</p>
+                              <p>3:00 PM
+                              Walk-ins Only</p>
+                              <p>4:00 PM
+                              Walk-ins Only</p>
+                              <p>5:00 PM
+                              Walk-ins Only</p>
+                              <p>6:00 PM
+                              Walk-ins Only</p>
+                              <p>7:00 PM
+                              Walk-ins Only</p>
+                    </div>
+                    <button type="button" class="collapsible">Closed Dates</button>
+                      <div class="content-collapse">
+                      <p id="t11"></p>
+                      <p id="t12">Open Times</p>
+                      <p id="t13">Open Times</p>
+                      <p id="t14">Open Times</p>
+                      <p id="t15">Open Times</p>
+                      <p id="t16">Open Times</p>
+                      <p id="t17">Open Times</p>
+                      <p id="t18">Open Times</p>
+                      <p id="t19">Open Times</p>
+                    </div>
+                    <button type="button" class="collapsible">Weather</button>
+                    <div class="content-collapse">
+                      <p><a href="https://weather.com/weather/today/l/USID0120:1:US">Check Weather</a></p>
+                    </div>  
+                                    
                                   </div>
                                   </div> 
 
@@ -144,9 +534,11 @@
          
     <footer>
         Today's Date: <span id="today"></span>
-        <script src="/Final/js/final.js"></script>
+        <script src="/final/js/final.js"></script>
+        <script src="/final/js/menu.js"></script>
+        <script src="/final/js/date.js"></script>
        
-        <p class="footer1"> © 2020 | Matias I. Salazar | BYU Idaho | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site </a> </p>
+        <p class="footer1"> © 2020 | Temple Inn & Suites | <a href="/final/atributions.html"> Atributions </a> </p>
     </footer>
     
 </body>
