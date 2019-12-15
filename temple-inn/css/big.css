@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap');
+@media (min-width: 500px) {
+html {
+    box-sizing: border-box;
+}
+*,*:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #f6da79;
+}
+.container {
+    flex-wrap: wrap;
+}
+
+header {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    background-color: #659DBD;
+    text-align: center;
+    font-family: 'Vollkorn SC', serif;
+    padding-top: 2%;
+    padding-left: 15%;
+    max-width: 100%;
+    vertical-align: middle;
+    padding-bottom: 5%;
+}
+
+main {
+    margin-top: 6%;
+    grid-row: 3/4;
+    grid-column: 1/4;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    max-width: 100%;
+}
+
+
+footer {
+    grid-row: 4/5;
+    background-color: #FBEEC1;
+    grid-column: 1/4;
+    text-align: center;
+    margin-top: 6%;
+
+}
+
+footer a, p {
+  color: black;
+}
+
+.title {
+  font-size: 3em;
+  padding-top: 5%;
+  padding-left: 3%;
+  max-width: 75%;
+
+}
+
+.navigation {
+  list-style: none;
+  margin: 0; 
+  background: #FBEEC1;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
+}
+
+.navigation a:hover {
+  background: lightseagreen;
+}
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  .img_icon {
+    position: absolute;
+    max-width: 8em;
+    left: 0px;
+    margin-left: 3%;
+    border-color: white;
+    border-style: solid;
+
+
+
+  }
+ .content img{
+    width: 30px;
+    border-radius: 2rem;
+ }
+
+ nav button{
+    display: none;
+}
+
+.card1 {
+    min-width: 400px;
+}
+ picture .stock{
+  max-width: 90%;
+ }
+ picture {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  max-width: 35%;
+  margin-bottom: 5%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container_card {
+  padding: 2px 16px;
+}
+.hideme{
+  display: none;
+}
+
+.container_form {
+  background-color: #659DBD;
+  display: block;
+  padding: 5%;
+  min-height: 100%;
+  border-color: black;
+  border-style: solid;
+  max-width: fit-content;
+}
+.invitation-container {
+  border-style: solid;
+  border-color: black;
+  background-color: #FBEEC1;
+  justify-content: center;
+  margin: .5rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+.container-spotlight {
+  max-width: 100%;
+  justify-content: center;
+}
+
+.container-spotlight img{
+  max-width: 100%;
+}
+
+.container-history {
+  border-style: solid;
+  border-color: black;
+  background-color: #F8E194;
+  justify-content: center;
+  margin: .5rem;
+  max-width: 100%;
+}
+
+.container-reception {
+  border-style: solid;
+  border-color: black;
+  background-color: #F8E194;
+  justify-content: center;
+  margin: .5rem;
+  max-width: 100%;
+}
+
+.container-reception h2, h3, li {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.container-reception  {
+  padding-bottom: 5%;
+}
+.container-history p{
+  margin: 5%;
+
+}
+.container-history h3{
+  text-align: center;
+
+}
+.container-contact{
+  display: grid;
+  grid-template-columns: 48.5% 48.5%;
+  grid-template-rows: auto auto;
+  grid-column-gap: 5%;
+  grid-row-gap: 3%;
+  max-width: 90%;
+
+}
+.container-text-contact {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.container-map {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.container-form{
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.conainer_form form{
+  min-height: 100%;
+}
+.container-map iframe{
+  min-width: 100%;
+}
+
+
+
+.container-services h2{
+  text-align: center;
+}
+.container-services p {
+  margin: 5%;
+}
+.container_spec_serv {
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  grid-column-gap: 5%;
+  max-width: 100%;
+  background-color: #659DBD;
+  border-style: solid;
+  border-color: black;
+  margin-bottom: 3%;
+  
+}
+
+.container_free_amen{
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  grid-column-gap: 5%;
+  max-width: 100%;
+  background-color:  #F8E194;
+  border-style: solid;
+  border-color: black;
+  margin-bottom: 3%;
+}
+
+.right {
+  grid-column: 2/3;
+  padding: 2%;
+
+}
+.left {
+  grid-column: 1/2;
+  padding: 2%;
+
+}
+
+.right img {
+  max-width: 100%;
+  
+}
+
+.left img {
+  max-width: 100%;
+  margin-top: 4%;
+}
+.right1 {
+  grid-column: 2/3;
+  padding: 2%;
+  border-style: solid;
+  border-color: black;
+  background-color: #659DBD;
+
+}
+.left1 {
+  grid-column: 1/2;
+  padding: 2%;
+  border-style: solid;
+  border-color: black;
+  background-color: #F8E194;
+
+}
+.container-outside-ameneties{
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  grid-column-gap: 5%;
+  max-width: 100%;
+}
+
+.missionaries img {
+  max-width: 100%;
+}
+
+.receptions img {
+  max-width: 100%;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #F8E194;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 5%;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #F8E194;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content-collapse {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #F8E194;
+  margin-bottom: 5%;
+}
+
+.form-results {
+  background-color: #F8E194;
+  border-color: black;
+  padding: 5%;
+  margin: 5%;
+  border-style: solid;
+}
+
+.container_form input{
+  right: 0;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-align: center;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.attributions-container {
+  border-style: solid;
+  border-color: black;
+  background-color: #FBEEC1;
+  justify-content: center;
+  margin: .5rem;
+  max-width: 100%;
+  text-align: center;
+  min-height: 80%;
+}
+
+.container_form select, input {
+  background-color: white;
+}
+
+.container_form button {
+  background-color: #f6da79;
+}
+}
