@@ -184,6 +184,7 @@ footer {
     overflow: hidden;
     background-color: #F8E194;
     font-size: 1.5rem;
+    margin-bottom: 5%;
   }
   .content-collapse p{
     font-size: 1rem;
@@ -320,5 +321,12 @@ footer {
 }
 .attributions-container li{
   margin: 5%;
+}
+.container_form select, input {
+  background-color: white;
+}
+
+.container_form button {
+  background-color: #f6da79;
 }
 }

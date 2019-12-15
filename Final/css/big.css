@@ -348,6 +348,7 @@ footer a, p {
   display: none;
   overflow: hidden;
   background-color: #F8E194;
+  margin-bottom: 5%;
 }
 
 .form-results {
@@ -465,5 +466,13 @@ footer a, p {
   max-width: 100%;
   text-align: center;
   min-height: 80%;
+}
+
+.container_form select, input {
+  background-color: white;
+}
+
+.container_form button {
+  background-color: #f6da79;
 }
 }

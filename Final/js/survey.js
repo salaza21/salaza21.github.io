@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     guests: document.querySelector('#guests').value,
     resDate: document.querySelector('#resDate').value,
     resDateEnd: document.querySelector('#resDateEnd').value,
+    temple: document.querySelector('#temple').value,
     comments: document.querySelector('#comments').value
     }
   // adds reservation to the end of the array of all reservations
@@ -61,6 +62,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
   resDate.innerHTML = 'Arrival Date: ' + resList[0].resDate;
   let resDateEnd = document.querySelector('#resDateEndResult');
   resDateEnd.innerHTML = 'Departure Date: ' + resList[0].resDateEnd;
+  let temple = document.querySelector('#resTempleResult');
+  temple.innerHTML = 'Temple Location: ' + resList[0].temple;
   let comments = document.querySelector('#commentsResult');
   comments.innerHTML = 'Comments: ' + resList[0].comments;
   }

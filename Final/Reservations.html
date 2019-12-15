@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/final/css/normalize.css">
     <link rel="stylesheet" href="/final/css/mobile.css">
     <link rel="stylesheet" href="/final/css/big.css">
-    <link rel="stylesheet" href="/final/css/bigger.css">
 
 
     
@@ -54,6 +53,16 @@
                         <input id="resDate" type="date" required><br><br>
                         <label for="resDateEnd">Reservation Date End:</label>
                         <input id="resDateEnd" type="date" required><br><br>
+                        <label for="temple">Select Temple:</label>
+                        <select id="temple" type="text" required>
+                            <option value>select</option>
+                            <option value="Idaho Falls">Idaho Falls</option>
+                            <option value="Oquirrh Mountian">Oquirrh Mountian</option>
+                            <option value="Provo">Provo</option>
+                            <option value="Washington D.C.">Washington D.C.</option>
+                            <option value="Rexburg">Rexburg</option>
+                            <option value="Boise">Boise</option>
+                            </select><br><br>
                         <label for="comments">Comments:</label>
                         <input id="comments" type="text" required><br><br>
                         <button id="submit"><a href="/final/reservation-result.html">Submit</a> </button>
@@ -71,6 +80,7 @@
   <p id="stateResult"> </p>
   <p id="guestsResult"> </p>
   <p id="resDateResult"> </p>
+  <p id="templeResult"> </p>
   <p id="resDateEndResult"> </p>
   <p id="commentsResult"> </p>
   <h2 >Thank you for choosing us. An email confirmation will also be sent.</h2>
